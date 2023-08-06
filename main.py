@@ -50,7 +50,7 @@ class API:
 			...
 
 		response_data = response.json()
-		if response_data['more_coming']:
+		if not response_data['more_coming']:
 			return response_data['results']
 
 	def create_reservation(
